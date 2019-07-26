@@ -5,7 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var authRoutes = require('./routes/auth-routes');
+//var usersRouter = require('./routes/users');
 
 var app = express();
 
@@ -20,7 +21,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/auth', authRoutes);// for logging in use this Router
+//app.use('/users', usersRouter);
+//above line has mounted userRouter on top of /users which means to use that router 
+//you will do "localhost:3000/users/" 
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
