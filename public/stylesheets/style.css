@@ -21,6 +21,7 @@
 	max-width: 70%;
 	margin: auto auto;
 	margin-top: 100px;
+	background: rgb(230,230,230,.5);
 	
 }
 .description{
@@ -45,8 +46,8 @@
 }
 .main-image > img {
 	border-radius: 50%;
-	width: 360px;
-	height: 360px;
+	width: 300px;
+	height: 300px;
 }
 
 body{
@@ -56,9 +57,20 @@ canvas{
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: -1;
 }
 .footer{
 	border: 1px solid black;
 	min-height: 500px;
 	background-image: linear-gradient(to right, black , gray); 
+}
+
+/*
+	media query for my photo and description to be show properly on small devies
+*/
+@media screen and (max-width: 768px){
+	.description > ul {
+		list-style-type: none;
+		text-align: center;
+	}
 }
