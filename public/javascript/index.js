@@ -1,17 +1,20 @@
 //canvas
+
+// ==================
+// for the background
+var canvas = document.querySelector('.mycanvas');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+//initialized the canvas
+var c = canvas.getContext('2d');
 //====================
 // event listener to resize the canvas
 window.addEventListener('resize', function(event){
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
+	var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+	if( w < 500 ){console.log("Hi there");}
 });
-// ==================
-// for the background
-var canvas = document.querySelector('canvas');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-//initialized the canvas
-var c = canvas.getContext('2d');
 // ===================
 // below is how we draw a rectangel arguments are (x, y, width , height)
 // c.fillStyle = 'rgba(255, 0, 0, 0.5)';

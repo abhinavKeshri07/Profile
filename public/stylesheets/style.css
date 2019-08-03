@@ -53,7 +53,7 @@
 body{
 	margin: 0;
 }
-canvas{
+.mycanvas{
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -68,9 +68,19 @@ canvas{
 /*
 	media query for my photo and description to be show properly on small devies
 */
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1055px){
 	.description > ul {
 		list-style-type: none;
 		text-align: center;
 	}
+}
+@media screen and (max-width: 500px){
+	.description > ul {
+		list-style-type: none;
+		text-align: center;
+	}
+	.main-image > img {
+	width: 200px;
+	height: 200px;
+}
 }
