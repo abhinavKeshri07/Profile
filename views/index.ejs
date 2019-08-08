@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!--Bootstrap-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel='stylesheet' href='/stylesheets/style.css' />
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
         <!-- Added Angular to project -->
@@ -109,23 +110,8 @@
               <li class="designation bold"><h5>-Bachelor In Computer Science(3rd year)</h5></li>
             </ul>
           </div>
-        </div>
 
-        <!-- <div class=footer>
-          
-        </div> -->
-      </main>
-
-
-
-
-
-      <!-- Background animation -->
-      <canvas class="mycanvas">
-        
-      </canvas>
-
-      <div class="container">
+      <div class="container myFixContainer">
       <canvas id="myChart" width="400px" height="400px"></canvas>
       <script>
       var mychartCanvas = document.getElementById('myChart');
@@ -164,18 +150,72 @@
     });
       myChart.canvas.parentNode.style.height = '600px';
       myChart.canvas.parentNode.style.width = '600px';
-      if(document.documentElement.clientWidth < 700){
-        myChart.canvas.parentNode.style.height = '300px';
-        myChart.canvas.parentNode.style.width = '300px';
-      }
+      
+      window.addEventListener('resize', function(){if(window.innerWidth < 700){myChart.canvas.parentNode.style.height = '300px'; myChart.canvas.parentNode.style.width = '300px';}else{myChart.canvas.parentNode.style.height = '600px';myChart.canvas.parentNode.style.width = '600px';}});
     </script>
 
   </div>
 
+        </div>
+
+        <!-- <div class=footer>
+          
+        </div> -->
+      </main>
 
 
 
 
+
+     
+      
+
+      
+ <!-- Background animation -->
+  <canvas class="mycanvas">
+        
+  </canvas>
+
+
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>Abhinav Keshri</h3>
+            <p>
+              something something something
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Home</li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Home</li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Home</li>
+
+            </ul>
+
+          </div>
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Follow Me</h4>
+            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-newsletter">
+            <h4>Newsletter</h4>
+            <p> something something something something</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="submit">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="copyright text-muted">Copyright  something something</p>
+  </footer>
 
 
 
